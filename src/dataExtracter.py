@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup as bs
-from h11 import Data
 import requests
 import sys
 sys.path.append("/src")

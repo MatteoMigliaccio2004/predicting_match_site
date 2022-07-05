@@ -1,6 +1,7 @@
 class MatchStatusStructure:
     
     match = {} 
+    
     def __init__(self, arr):
         self.match = {
             "home team": arr[0],
