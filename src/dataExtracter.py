@@ -19,6 +19,6 @@ class DataExtracter:
             i += 1
         self.structure = MatchStatusStructure(stats)
     
-prova = DataExtracter()
-stampa = prova.structure.get_match()
-print(stampa)
+#prova = DataExtracter()
+#stampa = prova.structure.get_match()
+#print(stampa)
