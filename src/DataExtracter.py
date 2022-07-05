@@ -8,8 +8,8 @@ class DataExtracter:
 
     structure = any
     
-    def __init__(self):
-        url = "https://understat.com/match/17124"
+    def __init__(self, complete_url):
+        url = complete_url
         response = requests.get(url)
         soup = bs(response.content, "html.parser")
         stats = soup.find_all("div", class_="progress-value")        
