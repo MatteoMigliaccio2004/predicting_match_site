@@ -35,10 +35,11 @@ class MatchResearcher:
         driver.get(self.get_final_url())
         wait.until(visible((By.CSS_SELECTOR, "body > div.wrapper > div.page-wrapper > div:nth-child(3) > div > div.calendar.team.simplebar.custom-scroll_container > div.custom-scroll_inner > div > div:nth-child(38)")))
 
-        i = 38
+        i = len(driver.find_elements(By.CLASS_NAME, "calendar-date-container"))
+        total_matches = i
         url_list = []
         
-        while i > (38 - self.number_of_matches):
+        while i > (total_matches - self.number_of_matches):
             value = driver.find_element(By.CSS_SELECTOR, "body > div.wrapper > div.page-wrapper > div:nth-child(3) > div > div.calendar.team.simplebar.custom-scroll_container > div.custom-scroll_inner > div > div:nth-child({}) > div.calendar-games > div > a".format(i)).get_attribute("href")
             url_list.append(value)
             i -= 1
