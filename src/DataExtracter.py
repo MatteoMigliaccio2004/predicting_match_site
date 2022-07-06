@@ -18,3 +18,6 @@ class DataExtracter:
             stats[i] = stats[i].text
             i += 1
         self.structure = MatchStatusStructure(stats)
+        
+    def get_structure(self):
+        return self.structure
